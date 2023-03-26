@@ -37,7 +37,10 @@
 
 ## ⚙️ How to run 
 
-Inside backend folder, run `docker-compose up` to build the docker container and run table migrations and seeds.
+- Backend
+  - Inside backend folder, run `docker-compose up` to build the docker container and run table migrations and seeds.
+- Frontend
+  - Inside frontend folder, run `yarn` to install dependencies and then run `yarn dev` to start de application.
 
 ## 👤 Author
 
