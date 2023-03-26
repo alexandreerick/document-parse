@@ -1,0 +1,14 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.transaction-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}

@@ -5,3 +5,11 @@
   text-align: center;
 }
 
+.transactions-cards-container {
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 14px;
+  grid-row-gap: 14px;
+  margin-top: 1.5rem;
+}

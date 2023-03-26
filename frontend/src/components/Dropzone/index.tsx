@@ -3,6 +3,7 @@ import { useDropzone } from "react-dropzone";
 import { FileArrowUp, Spinner } from "@phosphor-icons/react";
 
 import "./styles.css";
+import { toast } from "react-toastify";
 
 interface IDropzoneProps {
   onFileUploaded: (file: File) => void;
@@ -15,6 +16,12 @@ const Dropzone = ({ onFileUploaded, loading = false }: IDropzoneProps) => {
   const onDrop = useCallback(
     (acceptedFiles: any) => {
       const file = acceptedFiles[0];
+
+      if (!file) {
+        return toast("File format invalid.", {
+          type: "error"
+        })
+      }
 
       onFileUploaded(file);
     },
@@ -29,7 +36,7 @@ const Dropzone = ({ onFileUploaded, loading = false }: IDropzoneProps) => {
   } = useDropzone({
     onDrop,
     accept: {
-      'text/html': ['.txt']
+      'text/plain': ['.txt']
     },
     minSize: 0,
     maxSize,
