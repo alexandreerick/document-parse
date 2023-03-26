@@ -6,7 +6,7 @@
   "scripts": {
     "migration": "sequelize db:migrate",
     "seed": "sequelize db:seed:all",
-    "dev": "yarn migration && sequelize db:seed:all && ts-node-dev src/server.ts"
+    "dev": "yarn add sequelize-cli -D && yarn migration && sequelize db:seed:all && ts-node-dev src/server.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
